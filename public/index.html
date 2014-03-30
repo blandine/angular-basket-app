@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Your basket</title>
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="../node_modules/angular/lib/angular.min.js"></script>
+    <script src="../lib/angular-route.min.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/app.js"></script>
+
+    <style type="text/css">
+        .css-form input.ng-invalid.ng-dirty {
+
+            background-color: #FA787E;
+        }
+
+        .css-form input.ng-valid.ng-dirty {
+            background-color: #78FA89;
+        }
+
+        .container {
+            margin-top: 20px ;
+            margin-bottom: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #fff;
+        }
+        body {
+            background-color: #f2f2f2;
+        }
+
+    </style>
+
+</head>
+<body ng-app="basketApp">
+<div class="container" ng-view>
+</div>
+
+</body>
+</html>

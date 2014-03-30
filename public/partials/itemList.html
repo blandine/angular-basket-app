@@ -1,0 +1,30 @@
+<ul class="nav nav-pills">
+    <li class="active"><a>Your Basket</a></li>
+    <li class="disabled"><a>Your details</a></li><li class="disabled"><a>Confirmation</a></li>
+</ul>
+
+<h1>Your basket</h1>
+
+<div class="items">
+    <table class="table table-striped">
+        <thead>
+        <tr><th></th><th>Article</th><th>Price</th><th>Quantity</th></tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in items">
+            <td><img src="images/{{item.name.toLowerCase()}}.jpg" width="60px"/></td>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}€</td>
+            <td><button class="btn" ng-click="remove(item)">-</button>
+                {{item.quantity}}
+                <button class="btn" ng-click="add(item)" >+</button></td>
+        </tr>
+        </tbody>
+    </table>
+    <div>
+    TOTAL {{price(items)}}€
+    </div>
+    <div>
+    <a href="#/details" class="btn btn-primary btn-lg" >Next</a>
+    </div>
+</div>
