@@ -32,8 +32,8 @@ basketAppCtrl.controller('ConfirmationCtrl', ['$scope', 'user', 'items',
     function($scope, user, items){
         $scope.user = user;
         $scope.items = items;
-        $scope.ok = "none";
-        $scope.validOrder = function(ok){
-            $scope.ok = "block";
+        $scope.display = false;
+        $scope.validOrder = function(){
+            $scope.display = true;
         }
     }]);

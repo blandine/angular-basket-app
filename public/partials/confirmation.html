@@ -31,4 +31,6 @@
     <button class="btn btn-primary" ng-click="validOrder()">Validate</button>
 </div>
 
-<div class="alert alert-success"  style="display:{{ok}}">Your order is confirmed!</div>
+<div ng-class="{'display-block': display==true, 'display-none': display==false}">
+    <div class="alert alert-success">Your order is confirmed!</div>
+</div>
