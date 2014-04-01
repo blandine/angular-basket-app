@@ -1,0 +1,36 @@
+<ul class="nav nav-pills">
+    <li class="disabled"><a>Your Basket</a></li>
+    <li class="disabled"><a>Your details</a></li><li class="active"><a>Confirmation</a></li>
+</ul>
+
+<h1>Your basket</h1>
+
+<div class="items">
+    <table class="table">
+        <tr>
+            <td>Article</td>
+            <td>Price</td>
+            <td>Quantity</td>
+        </tr>
+        <tr ng-repeat="item in items">
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.quantity}}</td>
+        </tr>
+    </table>
+
+</div>
+
+<h1>Your information</h1>
+<div>
+    {{user.name}}
+    {{user.email}}
+</div>
+<div>
+    <a href="#/details" class="btn btn-default">Previous</a>
+    <button class="btn btn-primary" ng-click="validOrder()">Validate</button>
+</div>
+
+<div ng-class="{'display-block': display==true, 'display-none': display==false}">
+    <div class="alert alert-success">Your order is confirmed!</div>
+</div>
